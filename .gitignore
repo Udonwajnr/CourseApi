@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+
+*.env
+*.env.example
+*.env.local
+*.env.staging
+# vercel
+.vercel
+
+notes
