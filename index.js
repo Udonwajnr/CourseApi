@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/api/course', require('./route/courseRoute'));
+app.use('/api/payment', require("./route/paymentRoutes"));
 
 // Connect to the database
 connectDB();
