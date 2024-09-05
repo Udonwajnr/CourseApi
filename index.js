@@ -16,8 +16,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
+app.use("/api",require("./route/creatorRoute"))
 app.use('/api/course', require('./route/courseRoute'));
 app.use('/api/payment', require("./route/paymentRoutes"));
+app.use('/api/', require("./route/postRoute"));
+app.use('/api/', require("./route/commentRoute"));
+
 
 // Connect to the database
 connectDB();

@@ -12,8 +12,13 @@ const courseSchema = new mongoose.Schema({
     required: [true, 'Course description is required'],
   },
   image: {
-    type: String,
+      type: String,
     required: [true, 'Course image URL is required'],
+  },
+  creatorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Creator", // Reference to the Creator schema
+    required: true, // Ensure every course has a creator
   },
   courseContent: [
     {
