@@ -2,7 +2,8 @@ const mongoose = require("mongoose")
 const commentSchema = new mongoose.Schema({
     nameOfCommenter:{
         type:String,
-        required:true
+        required:true,
+        // put unique if necessary
     },
     post: {
       type: mongoose.Schema.Types.ObjectId,
